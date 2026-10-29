@@ -27,4 +27,4 @@ img/artist-*.svg
 
 ## Autor
 
-Tu nombre - [sergiorodriguezgonzalez-bot](https://github.com/)
+sergiorodriguezgonzalez-bot(https://github.com/)
