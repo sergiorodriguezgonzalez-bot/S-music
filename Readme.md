@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Página web sobre descubrir música nueva y salir del algoritmo, hecha solo con HTML y CSS. Tiene header y footer responsive, tres secciones de pantalla completa y una galería de 12 artistas con su descripción. Los iconos son de Google Material Symbols.
+A website about discovering new music and breaking out of the algorithm, made using only HTML and CSS. It features a responsive header and footer, three full-screen sections, and a gallery of 12 artists with their descriptions. The icons are from Google Material Symbols.
 
 - Diseño responsive **mobile first** con media queries (móvil, tablet desde 768px y escritorio desde 992px) y flexbox.
 - Etiquetas semánticas: `header`, `nav`, `main`, `section`, `article`, `aside`, `figure` y `footer`.
