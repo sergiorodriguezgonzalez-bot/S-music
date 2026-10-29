@@ -1,0 +1,405 @@
+/* Normalizar: quitamos los estilos por defecto del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Colores de la web (verdes y azules de primavera). Así los cambias en un solo sitio */
+:root {
+    --forest: #aee141;
+    --leaf: #1cb3a6;
+    --mint: #5c9f56;
+    --sky: #48cae4;
+    --deep-blue: #40a1c4;
+    --white: #ffffff;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth; /* Al pulsar el menú se desliza suavemente */
+}
+
+body {
+    font-family: Verdana, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--forest);
+    background-color: var(--mint);
+}
+
+/* Títulos con otra fuente para que se distingan del texto normal */
+h1,
+h2,
+h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Alinea los iconos con el texto */
+.material-symbols-outlined {
+    vertical-align: middle;
+}
+
+/* ---------- Cabecera (primero móvil: todo en columna) ---------- */
+.site-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background-color: var(--forest);
+    color: var(--white);
+}
+
+.logo {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.5rem;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.main-nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.25rem;
+}
+
+.main-nav a {
+    padding: 0.6rem 1rem;
+    color: var(--white);
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Efecto hover: al pasar el ratón sale una rayita azul y se aclara el fondo */
+.main-nav a:hover,
+.main-nav a:focus {
+    background-color: rgba(255, 255, 255, 0.12);
+    border-bottom-color: var(--sky);
+}
+
+/* ---------- Secciones grandes (cada una ocupa mínimo la pantalla entera) ---------- */
+.screen {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido en vertical */
+    padding: 3rem 1rem;
+}
+
+/* Portada: degradado de verde a azul con una capa oscura encima para leer bien */
+.hero {
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    background: linear-gradient(180deg, rgba(27, 67, 50, 0.3), rgba(27, 67, 50, 0.8)),
+        linear-gradient(135deg, var(--leaf), var(--deep-blue));
+}
+
+.hero-content {
+    max-width: 40rem;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    margin-bottom: 2rem;
+}
+
+/* Botón con borde redondeado */
+.button {
+    display: inline-block;
+    padding: 0.9rem 1.6rem;
+    border: 2px solid var(--white);
+    border-radius: 2rem;
+    color: var(--white);
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover del botón: se rellena de blanco y el texto cambia de color */
+.button:hover,
+.button:focus {
+    background-color: var(--white);
+    color: var(--deep-blue);
+}
+
+/* ---------- Tarjetas y pasos (flexbox) ---------- */
+/* En móvil van una debajo de otra */
+.cards,
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.card,
+.step {
+    flex: 1; /* Todas ocupan el mismo ancho */
+    padding: 2rem 1.5rem;
+    background-color: var(--white);
+    border-bottom: 5px solid var(--sky);
+    border-radius: 0.5rem;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+/* Hover: la tarjeta sube un poquito y cambia el color del borde */
+.card:hover,
+.step:hover {
+    transform: translateY(-0.5rem);
+    border-color: var(--leaf);
+}
+
+.card-icon {
+    font-size: 3rem;
+    color: var(--deep-blue);
+}
+
+.card h3,
+.step h3 {
+    margin: 0.5rem 0;
+}
+
+/* La sección de pasos tiene fondo blanco para diferenciarla */
+.how-to {
+    background-color: var(--white);
+}
+
+.how-to .step {
+    background-color: var(--mint);
+}
+
+.how-to-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.steps {
+    flex: 3; /* Los pasos ocupan más espacio que el aside */
+}
+
+/* Caja de consejos (aside) */
+.tips {
+    flex: 1;
+    padding: 1.5rem;
+    background-color: var(--deep-blue);
+    color: var(--white);
+    border-radius: 0.5rem;
+}
+
+.tips h3 {
+    margin-bottom: 1rem;
+}
+
+.tips p {
+    margin-bottom: 0.75rem;
+}
+
+/* ---------- Galería (móvil: 1 columna) ---------- */
+.gallery-section {
+    min-height: 100vh;
+    padding: 3rem 1rem;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /* Si no caben, pasan a la fila de abajo */
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Cada figure es una tarjeta con la imagen arriba y el texto abajo */
+.gallery figure {
+    width: 100%;
+    overflow: hidden; /* Esconde el zoom de la imagen que se sale */
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    transition: transform 0.3s;
+}
+
+.gallery img {
+    display: block;
+    width: 100%;
+    height: 14rem;
+    object-fit: cover; /* La imagen llena la caja sin deformarse */
+    transition: transform 0.5s;
+}
+
+/* Descripción del cantante, siempre visible debajo de la imagen */
+.gallery figcaption {
+    position: relative; /* Para que quede por encima del zoom de la imagen */
+    padding: 1rem;
+    background-color: var(--white);
+}
+
+.gallery figcaption h3 {
+    margin-bottom: 0.25rem;
+    color: var(--deep-blue);
+}
+
+.gallery figcaption p {
+    font-size: 0.9rem;
+}
+
+/* Hover de la galería: la imagen hace zoom y la tarjeta sube un poco */
+.gallery figure:hover {
+    transform: translateY(-0.4rem);
+}
+
+.gallery figure:hover img {
+    transform: scale(1.1);
+}
+
+/* ---------- Pie de página (primero móvil: columna) ---------- */
+.site-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    background-color: var(--forest);
+    color: var(--white);
+}
+
+.site-footer h2 {
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+/* address sale en cursiva por defecto, aquí lo dejamos normal */
+.site-footer address {
+    font-style: normal;
+}
+
+.site-footer nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.site-footer nav a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.site-footer nav a:hover {
+    color: var(--sky);
+    text-decoration: underline;
+}
+
+/* ---------- Tablet: a partir de 768px ---------- */
+@media screen and (min-width: 768px) {
+    /* Cabecera: logo a la izquierda y menú a la derecha */
+    .site-header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
+
+    .main-nav {
+        flex-direction: row;
+        width: auto;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .screen,
+    .gallery-section {
+        padding: 4rem 2rem;
+    }
+
+    /* Tarjetas en fila; si no caben, saltan de línea */
+    .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        flex: 1 1 40%;
+    }
+
+    /* Los 3 pasos en fila, con el aside debajo */
+    .steps {
+        flex-direction: row;
+    }
+
+    /* Galería en 2 columnas (restamos el hueco entre ellas) */
+    .gallery figure {
+        width: calc((100% - 1rem) / 2);
+    }
+
+    /* Footer en fila, repartiendo el espacio */
+    .site-footer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 2rem;
+    }
+
+    .copyright {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ---------- Escritorio: a partir de 992px ---------- */
+@media screen and (min-width: 992px) {
+    .site-header {
+        padding: 1.5rem 4rem;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+    }
+
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .screen,
+    .gallery-section {
+        padding: 5rem 4rem;
+    }
+
+    /* Las 3 tarjetas siempre en una sola fila */
+    .cards {
+        flex-wrap: nowrap;
+    }
+
+    /* Pasos a la izquierda en columna y aside a la derecha */
+    .how-to-layout {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .steps {
+        flex-direction: column;
+    }
+
+    /* Galería en 3 columnas: 12 imágenes = 4 filas de 3 */
+    .gallery figure {
+        width: calc((100% - 2rem) / 3);
+    }
+
+    .site-footer {
+        padding: 3rem 4rem 2rem;
+    }
+
+    .site-footer address,
+    .site-footer nav {
+        width: 30%;
+    }
+}
