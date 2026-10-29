@@ -16,7 +16,7 @@ https://dribbble.com/shots/23877372-Travel-agency-landing-page-design
 ```
 index.html
 css/style.css
-img/artist-*.svg
+img/artist-
 ```
 
 ## Recursos que use
