@@ -456,7 +456,7 @@ h2 {
     }
 
     /* Footer columns: cada bloque de contacto y navegación ocupa el 30% del ancho. */
-    .site-footer address,
+    .site-footer .footer-contact,
     .site-footer nav {
         width: 30%;
     }
