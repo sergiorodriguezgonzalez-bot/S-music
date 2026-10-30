@@ -1,5 +1,4 @@
-
-/* Reset: quita los márgenes y espacios que pone el navegador por defecto.
+/* Reset: quita márgenes y espacios que pone el navegador .
    box-sizing hace que el padding y el borde cuenten dentro del tamaño del elemento. */
 * {
     margin: 0;
@@ -7,7 +6,7 @@
     box-sizing: border-box;
 }
 
-/* Color variables: permite cambiar los colores de toda la web desde un solo sitio. */
+/* Color variables: cambiar los colores desde un solo sitio. */
 :root {
     --forest: #aee141;
     --leaf: #1cb3a6;
@@ -19,7 +18,7 @@
     --orange: #e25f1e;
 }
 
-/* HTML: tamaño base del texto y desplazamiento suave al pulsar los enlaces del menú. */
+/* HTML: tamaño base del texto y desplazamiento smooth al pulsar los enlaces del menú. */
 html {
     font-size: 16px;
     scroll-behavior: smooth;
@@ -48,7 +47,7 @@ h2 {
     text-align: center;
 }
 
-/* Icons: alinea los iconos con el texto para que queden a la misma altura. */
+/* Icons: alinea los iconos con el texto a la misma altura. */
 .material-symbols-outlined {
     vertical-align: middle;
 }
@@ -98,7 +97,7 @@ h2 {
 }
 
 /* ---------- Sections: secciones principales de la web ---------- */
-/* Screen: cada sección ocupa al menos toda la altura de la pantalla.
+/* Screen: cada sección ocupa al menos toda la altura de la pantalla del movil.
    Flexbox centra el contenido verticalmente y padding crea espacio interior. */
 .screen {
     min-height: 100vh;
@@ -108,7 +107,7 @@ h2 {
     padding: 3rem 1rem;
 }
 
-/* Hero: portada principal con texto centrado y un fondo de degradados. */
+/* Hero: portada principal con texto centrado y un fondo degradado. */
 .hero {
     align-items: center;
     text-align: center;
@@ -354,7 +353,7 @@ h2 {
         padding: 1rem 2rem;
     }
 
-    /* Main navigation: coloca los enlaces del menú en fila. */
+    /* Main navigation: enlaces del menú en fila. */
     .main-nav {
         flex-direction: row;
         width: auto;
