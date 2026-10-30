@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+<!--idioma-->
 
 <head>
-    <!-- Head: contiene la información de la página y los enlaces a CSS y fuentes. -->
+    <!-- Head:información de la página,enlaces a CSS y fuentes. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S-Music - Descubre música nueva</title>
-
-    <!-- Google icons: carga los iconos -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
 
@@ -35,7 +34,7 @@
         </nav>
     </header>
 
-    <!-- Main:contenido principal de la página -->
+    <!-- Main: contiene el contenido principal de la página. -->
     <main>
 
         <!-- Section 1 - Hero: portada principal de la web. -->
@@ -65,7 +64,8 @@
                 <article class="card">
                     <span class="material-symbols-outlined card-icon" aria-hidden="true">library_music</span>
                     <h3>Géneros nuevos</h3>
-                    <p>Prueba un estilo que nunca escuchas. Del flamenco-pop al indie, siempre hay algo que engancha.</p>
+                    <p>Prueba un estilo que nunca escuchas. Del flamenco-pop al indie, siempre hay algo que engancha.
+                    </p>
                 </article>
 
                 <article class="card">
@@ -84,29 +84,29 @@
         </section>
 
         <!-- Section 3 - How-to: explica los pasos para descubrir música. -->
-        <section id="how-to" class="screen how-to">
+        <section id="how-to" class="screen-how-to">
             <h2>Cómo descubrir música</h2>
 
             <!-- Div: agrupa la lista de pasos y el aside de consejos. -->
             <div class="how-to-layout">
 
                 <!-- Ol: lista ordenada porque los pasos siguen una secuencia. -->
-                <!-- Li: pasos de la lista. -->
+                <!-- Li: representa cada uno de los pasos de la lista. -->
                 <ol class="steps">
                     <li class="step">
-                        <span class="material-symbols-outlined card-icon" aria-hidden="true">queue_music</span>
+                        <span class="material-symbols-outlined-card-icon" aria-hidden="true">queue_music</span>
                         <h3>1. Sal de tu playlist</h3>
                         <p>Apaga el modo aleatorio y busca algo que no te hayan recomendado.</p>
                     </li>
 
                     <li class="step">
-                        <span class="material-symbols-outlined card-icon" aria-hidden="true">headphones</span>
+                        <span class="material-symbols-outlined-card-icon" aria-hidden="true">headphones</span>
                         <h3>2. Dale una oportunidad</h3>
                         <p>Escucha al menos tres canciones antes de decidir si te gusta.</p>
                     </li>
 
                     <li class="step">
-                        <span class="material-symbols-outlined card-icon" aria-hidden="true">share</span>
+                        <span class="material-symbols-outlined-card-icon" aria-hidden="true">share</span>
                         <h3>3. Compártelo</h3>
                         <p>Pásale tu hallazgo a un amigo. La música mola más si se comparte.</p>
                     </li>
@@ -264,15 +264,17 @@
 
     <!-- Footer: pie de página con información de contacto, enlaces y copyright. -->
     <footer class="site-footer">
-
-        <!-- Address: etiqueta semántica para agrupar los datos de contacto. -->
-        <address>
+    
+        <!-- Address: etiqueta agrupar los datos de contacto. -->
+        <div class="footer-contact">
             <h2>Contacto</h2>
-            <p><span class="material-symbols-outlined" aria-hidden="true">mail</span>S-music@gmail.com</p>
-            <p><span class="material-symbols-outlined" aria-hidden="true">campaign</span>Cuéntanos qué estás escuchando
-            </p>
-        </address>
-
+            <address>
+                <p><span class="material-symbols-outlined" aria-hidden="true">mail</span>S-music@gmail.com</p>
+                <p><span class="material-symbols-outlined" aria-hidden="true">campaign</span>Cuéntanos qué estás escuchando
+                </p>
+            </address>
+        </div>
+    
         <!-- Nav: contiene enlaces para volver a las secciones de la página. -->
         <nav aria-label="Enlaces del pie">
             <h2>Enlaces</h2>
@@ -280,10 +282,10 @@
             <a href="#how-to">Cómo</a>
             <a href="#artists">Artistas</a>
         </nav>
-
+    
         <!-- Copyright: muestra el aviso de derechos y el año. -->
         <p class="copyright">© 2026 S-Music. ;)</p>
     </footer>
-</body>
-
-</html>
+    </body>
+    
+    </html>

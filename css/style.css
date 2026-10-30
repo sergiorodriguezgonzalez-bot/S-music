@@ -1,3 +1,4 @@
+
 /* Reset: quita los márgenes y espacios que pone el navegador por defecto.
    box-sizing hace que el padding y el borde cuenten dentro del tamaño del elemento. */
 * {
@@ -15,6 +16,7 @@
     --deep-blue: #40a1c4;
     --white: #ffffff;
     --pink: #d29ecd;
+    --orange: #e25f1e;
 }
 
 /* HTML: tamaño base del texto y desplazamiento suave al pulsar los enlaces del menú. */
@@ -183,7 +185,7 @@ h2 {
 /* Card icon: aumenta el tamaño y cambia el color de los iconos de las tarjetas. */
 .card-icon {
     font-size: 3rem;
-    color: var(--deep-blue);
+    color: var(--orange);
 }
 
 /* Card and step headings: añade espacio alrededor de los títulos de cada elemento. */
@@ -221,8 +223,8 @@ h2 {
 .tips table {
     width: 100%;
     border-collapse: collapse;
-    background-color: var(--white);
-    border: 1px solid var(--white);
+    background-color: var(--deep-blue);
+    border: 1px solid var(--deep-blue);
     border-radius: 10px;
     overflow: hidden;
 }
